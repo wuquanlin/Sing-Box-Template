@@ -180,7 +180,7 @@
         "rule_set": [
           "ad_blocker"
         ],
-        "action": "reject",
+        "action": "reject"
       },
       {
         "rule_set": [
