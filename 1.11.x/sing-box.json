@@ -178,7 +178,6 @@
       },
       {
         "rule_set": [
-          "onedrive_ip",
           "onedrive_domain"
         ],
         "action": "route",
@@ -186,7 +185,6 @@
       },
       {
         "rule_set": [
-          "microsoft_ip",
           "microsoft_domain"
         ],
         "action": "route",
@@ -223,24 +221,10 @@
         "download_detour": "direct"
       },
       {
-        "tag": "onedrive_ip",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/onedrive.srs",
-        "download_detour": "direct"
-      },
-      {
         "tag": "onedrive_domain",
         "type": "remote",
         "format": "binary",
         "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/onedrive.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "microsoft_ip",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/microsoft.srs",
         "download_detour": "direct"
       },
       {
