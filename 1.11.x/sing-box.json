@@ -313,15 +313,10 @@
       "tag": "proxy",
       "type": "selector",
       "outbounds": [
-        "hk",
         "hk-auto",
-        "tw",
         "tw-auto",
-        "jp",
         "jp-auto",
-        "sg",
         "sg-auto",
-        "us",
         "us-auto",
         "all",
         "all-auto",
@@ -335,15 +330,10 @@
       "outbounds": [
         "proxy",
         "direct",
-        "hk",
         "hk-auto",
-        "tw",
         "tw-auto",
-        "jp",
         "jp-auto",
-        "sg",
         "sg-auto",
-        "us",
         "us-auto",
         "all",
         "all-auto"
@@ -356,15 +346,10 @@
       "outbounds": [
         "proxy",
         "direct",
-        "hk",
         "hk-auto",
-        "tw",
         "tw-auto",
-        "jp",
         "jp-auto",
-        "sg",
         "sg-auto",
-        "us",
         "us-auto",
         "all",
         "all-auto"
@@ -377,15 +362,10 @@
       "outbounds": [
         "proxy",
         "direct",
-        "hk",
         "hk-auto",
-        "tw",
         "tw-auto",
-        "jp",
         "jp-auto",
-        "sg",
         "sg-auto",
-        "us",
         "us-auto",
         "all",
         "all-auto"
@@ -398,15 +378,10 @@
       "outbounds": [
         "proxy",
         "direct",
-        "hk",
         "hk-auto",
-        "tw",
         "tw-auto",
-        "jp",
         "jp-auto",
-        "sg",
         "sg-auto",
-        "us",
         "us-auto",
         "all",
         "all-auto"
@@ -419,15 +394,10 @@
       "outbounds": [
         "proxy",
         "direct",
-        "hk",
         "hk-auto",
-        "tw",
         "tw-auto",
-        "jp",
         "jp-auto",
-        "sg",
         "sg-auto",
-        "us",
         "us-auto",
         "all",
         "all-auto"
@@ -440,15 +410,10 @@
       "outbounds": [
         "proxy",
         "direct",
-        "hk",
         "hk-auto",
-        "tw",
         "tw-auto",
-        "jp",
         "jp-auto",
-        "sg",
         "sg-auto",
-        "us",
         "us-auto",
         "all",
         "all-auto"
@@ -461,15 +426,10 @@
       "outbounds": [
         "proxy",
         "direct",
-        "hk",
         "hk-auto",
-        "tw",
         "tw-auto",
-        "jp",
         "jp-auto",
-        "sg",
         "sg-auto",
-        "us",
         "us-auto",
         "all",
         "all-auto"
@@ -482,15 +442,10 @@
       "outbounds": [
         "proxy",
         "direct",
-        "hk",
         "hk-auto",
-        "tw",
         "tw-auto",
-        "jp",
         "jp-auto",
-        "sg",
         "sg-auto",
-        "us",
         "us-auto",
         "all",
         "all-auto"
@@ -503,15 +458,10 @@
       "outbounds": [
         "proxy",
         "direct",
-        "hk",
         "hk-auto",
-        "tw",
         "tw-auto",
-        "jp",
         "jp-auto",
-        "sg",
         "sg-auto",
-        "us",
         "us-auto",
         "all",
         "all-auto"
@@ -524,45 +474,15 @@
       "outbounds": [
         "proxy",
         "direct",
-        "hk",
         "hk-auto",
-        "tw",
         "tw-auto",
-        "jp",
         "jp-auto",
-        "sg",
         "sg-auto",
-        "us",
         "us-auto",
         "all",
         "all-auto"
       ],
       "default": "proxy"
-    },
-    {
-      "tag": "hk",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "tw",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "jp",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "sg",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "us",
-      "type": "selector",
-      "outbounds": []
     },
     {
       "tag": "all",
@@ -623,15 +543,10 @@
       "outbounds": [
         "direct",
         "proxy",
-        "hk",
         "hk-auto",
-        "tw",
         "tw-auto",
-        "jp",
         "jp-auto",
-        "sg",
         "sg-auto",
-        "us",
         "us-auto",
         "all",
         "all-auto"
