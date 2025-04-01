@@ -178,6 +178,22 @@
       },
       {
         "rule_set": [
+          "onedrive_ip",
+          "onedrive_domain"
+        ],
+        "action": "route",
+        "outbound": "onedrive"
+      },
+      {
+        "rule_set": [
+          "microsoft_ip",
+          "microsoft_domain"
+        ],
+        "action": "route",
+        "outbound": "microsoft"
+      },
+      {
+        "rule_set": [
           "ad_blocker"
         ],
         "action": "reject"
@@ -204,6 +220,34 @@
         "type": "remote",
         "format": "binary",
         "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/apple.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "onedrive_ip",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/onedrive.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "onedrive_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/onedrive.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "microsoft_ip",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/microsoft.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "microsoft_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/microsoft.srs",
         "download_detour": "direct"
       },
       {
@@ -342,6 +386,38 @@
     },
     {
       "tag": "apple",
+      "type": "selector",
+      "outbounds": [
+        "proxy",
+        "direct",
+        "hk-auto",
+        "tw-auto",
+        "jp-auto",
+        "sg-auto",
+        "us-auto",
+        "all",
+        "all-auto"
+      ],
+      "default": "direct"
+    },
+    {
+      "tag": "onedrive",
+      "type": "selector",
+      "outbounds": [
+        "proxy",
+        "direct",
+        "hk-auto",
+        "tw-auto",
+        "jp-auto",
+        "sg-auto",
+        "us-auto",
+        "all",
+        "all-auto"
+      ],
+      "default": "direct"
+    },
+    {
+      "tag": "microsoft",
       "type": "selector",
       "outbounds": [
         "proxy",
