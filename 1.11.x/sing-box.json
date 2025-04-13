@@ -8,7 +8,7 @@
     "servers": [
       {
         "tag": "google",
-        "address": "https://119.29.29.29/dns-query",
+        "address": "https://223.6.6.6/dns-query",
         "detour": "proxy"
       },
       {
