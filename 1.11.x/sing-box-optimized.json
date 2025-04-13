@@ -37,9 +37,7 @@
       "tag": "doh-cnnic",
       "address": "https://doh.cnnic.cn/dns-query",
       "detour": "direct"
-    }
-  ]
-}
+    },
       {
         "tag": "fakeip",
         "address": "fakeip"
