@@ -1,0 +1,41 @@
+"dns": {
+  "strategy": "prefer_ipv4",
+  "disable_cache": false,
+  "independent_cache": true,
+  "fakeip": {
+    "enabled": true,
+    "inet4_range": "198.18.0.0/15"
+  },
+  "servers": [
+    {
+      "tag": "doh-alibaba-1",
+      "address": "https://dns.alidns.com/dns-query",
+      "detour": "direct"
+    },
+    {
+      "tag": "doh-alibaba-2",
+      "address": "https://223.5.5.5/dns-query",
+      "detour": "direct"
+    },
+    {
+      "tag": "doh-tencent",
+      "address": "https://doh.pub/dns-query",
+      "detour": "direct"
+    },
+    {
+      "tag": "doh-baidu",
+      "address": "https://doh.baidu.com/dns-query",
+      "detour": "direct"
+    },
+    {
+      "tag": "doh-360",
+      "address": "https://doh.360.cn/dns-query",
+      "detour": "direct"
+    },
+    {
+      "tag": "doh-cnnic",
+      "address": "https://doh.cnnic.cn/dns-query",
+      "detour": "direct"
+    }
+  ]
+}
