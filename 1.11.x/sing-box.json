@@ -8,7 +8,7 @@
     "servers": [
       {
         "tag": "google",
-        "address": "https://223.6.6.6/dns-query",
+        "address": "https://8.8.8.8/dns-query",
         "detour": "proxy"
       },
       {
@@ -57,7 +57,7 @@
         "server": "ali"
       }
     ],
-    "final": "ali",
+    "final": "google",
     "independent_cache": true
   },
   "route": {
