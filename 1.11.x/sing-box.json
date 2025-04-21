@@ -162,6 +162,13 @@
       },
       {
         "rule_set": [
+          "myurl_domain"
+        ],
+        "action": "route",
+        "outbound": "myurl"
+      },
+      {
+        "rule_set": [
           "google_ip",
           "google_domain"
         ],
@@ -211,6 +218,14 @@
         "type": "remote",
         "format": "binary",
         "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/apple.srs",
+        "download_detour": "direct"
+      },
+    "rule_set": [
+      {
+        "tag": "myurl_domain",
+        "type": "remote",
+        "format": "json",
+        "url": "https://ghfast.top/https://raw.githubusercontent.com/wuquanlin/proxyrules/refs/heads/main/singbox-myurl.json",
         "download_detour": "direct"
       },
       {
@@ -383,6 +398,22 @@
         "all-auto"
       ],
       "default": "direct"
+    },
+    {
+      "tag": "myurl",
+      "type": "selector",
+      "outbounds": [
+        "proxy",
+        "direct",
+        "hk-auto",
+        "tw-auto",
+        "jp-auto",
+        "sg-auto",
+        "us-auto",
+        "all",
+        "all-auto"
+      ],
+      "default": "sg-auto"
     },
     {
       "tag": "onedrive",
