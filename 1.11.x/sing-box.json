@@ -220,7 +220,6 @@
         "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/apple.srs",
         "download_detour": "direct"
       },
-    "rule_set": [
       {
         "tag": "myurl_domain",
         "type": "remote",
