@@ -224,7 +224,7 @@
       {
         "tag": "myurl_domain",
         "type": "remote",
-        "format": "json",
+        "format": "source",
         "url": "https://ghfast.top/https://raw.githubusercontent.com/wuquanlin/proxyrules/refs/heads/main/singbox-myurl.json",
         "download_detour": "direct"
       },
