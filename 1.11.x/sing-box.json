@@ -86,6 +86,11 @@
         "action": "hijack-dns"
       },
       {
+        "ip": "192.168.6.0/24",
+        "action": "route",
+        "outbound": "all"
+      },
+      {
         "ip_is_private": true,
         "action": "route",
         "outbound": "direct"
