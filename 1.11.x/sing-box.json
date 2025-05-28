@@ -86,7 +86,7 @@
         "action": "hijack-dns"
       },
       {
-        "ip": "192.168.6.0/24",
+        "ip_range": "192.168.6.0/24",
         "action": "route",
         "outbound": "all"
       },
