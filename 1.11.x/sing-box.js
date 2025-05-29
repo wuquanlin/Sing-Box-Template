@@ -16,10 +16,7 @@ let proxies = await produceArtifact({
 config.outbounds.push(...proxies)
 
 config.outbounds.map(i => {
-  if (['all-auto'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /^(?!(直连|home|misaka|hy2-iZj6cb|reality)$).*/));
-  }
-  if (['all'].includes(i.tag)) {
+  if (['all', 'all-auto'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies))
   }
   if (['hk', 'hk-auto'].includes(i.tag)) {
