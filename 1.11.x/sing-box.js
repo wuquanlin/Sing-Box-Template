@@ -17,7 +17,7 @@ config.outbounds.push(...proxies)
 
 config.outbounds.map(i => {
   if (['all-auto'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /^(?!(直连|home|misaka|hy2-iZj6cb|reality))))
+    i.outbounds.push(...getTags(proxies, /^(?!(直连|home|misaka|hy2-iZj6cb|reality)$).*/));
   }
   if (['all'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies))
