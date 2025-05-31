@@ -24,19 +24,19 @@ config.outbounds.map(i => {
   if (i.tag === 'all-auto') {
     i.outbounds.push(...getTags(proxies.filter(p => !/home|hy|reality/i.test(p.tag))));
   }
-  if (['hk', 'hk-auto'].includes(i.tag)) {
+  if (['hk-auto'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /港|hk|hongkong|kong kong|🇭🇰/i))
   }
-  if (['tw', 'tw-auto'].includes(i.tag)) {
+  if (['tw-auto'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /台|tw|taiwan|🇹🇼/i))
   }
-  if (['jp', 'jp-auto'].includes(i.tag)) {
+  if (['jp-auto'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /日本|jp|japan|🇯🇵/i))
   }
-  if (['sg', 'sg-auto'].includes(i.tag)) {
+  if (['sg-auto'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /^(?!.*(?:us)).*(新|狮城|sg|singapore|🇸🇬)/i))
   }
-  if (['us', 'us-auto'].includes(i.tag)) {
+  if (['us-auto'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /美|us|unitedstates|united states|🇺🇸/i))
   }
 })
