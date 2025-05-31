@@ -108,7 +108,7 @@
       {
         "rule_set": "bilibili_domain",
         "action": "route",
-        "outbound": "bilibili"
+        "outbound": "哔哩哔哩"
       },
       {
         "rule_set": [
@@ -126,7 +126,7 @@
       {
         "rule_set": "youtube_domain",
         "action": "route",
-        "outbound": "youtube"
+        "outbound": "油管"
       },
       {
         "rule_set": "openai_domain",
@@ -162,14 +162,14 @@
           "telegram_domain"
         ],
         "action": "route",
-        "outbound": "telegram"
+        "outbound": "电报"
       },
       {
         "rule_set": [
           "myurl_domain"
         ],
         "action": "route",
-        "outbound": "myurl"
+        "outbound": "自定义翻墙"
       },
       {
         "rule_set": [
@@ -205,7 +205,7 @@
           "cn_domain"
         ],
         "action": "route",
-        "outbound": "cn"
+        "outbound": "国内网址"
       }
     ],
     "rule_set": [
@@ -365,7 +365,7 @@
       "default": "direct"
     },
     {
-      "tag": "myurl",
+      "tag": "自定义翻墙",
       "type": "selector",
       "outbounds": [
         "默认选择",
@@ -413,7 +413,7 @@
       "default": "direct"
     },
     {
-      "tag": "telegram",
+      "tag": "电报",
       "type": "selector",
       "outbounds": [
         "默认选择",
@@ -429,7 +429,7 @@
       "default": "默认选择"
     },
     {
-      "tag": "bilibili",
+      "tag": "哔哩哔哩",
       "type": "selector",
       "outbounds": [
         "默认选择",
@@ -477,7 +477,7 @@
       "default": "默认选择"
     },
     {
-      "tag": "youtube",
+      "tag": "油管",
       "type": "selector",
       "outbounds": [
         "默认选择",
@@ -509,7 +509,7 @@
       "default": "默认选择"
     },
     {
-      "tag": "cn",
+      "tag": "国内网址",
       "type": "selector",
       "outbounds": [
         "默认选择",
