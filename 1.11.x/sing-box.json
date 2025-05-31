@@ -9,7 +9,7 @@
       {
         "tag": "google",
         "address": "https://223.6.6.6/dns-query",
-        "detour": "proxy"
+        "detour": "默认选择"
       },
       {
         "tag": "ali",
@@ -88,7 +88,7 @@
       {
         "ip_cidr": ["192.168.6.0/24"],
         "action": "route",
-        "outbound": "all"
+        "outbound": "手动选择1"
       },
       {
         "ip_is_private": true,
@@ -116,7 +116,7 @@
           "netflix_domain"
         ],
         "action": "route",
-        "outbound": "netflix"
+        "outbound": "奈飞"
       },
       {
         "rule_set": "bahamut_domain",
@@ -131,7 +131,7 @@
       {
         "rule_set": "openai_domain",
         "action": "route",
-        "outbound": "openai"
+        "outbound": "人工智能"
       },
       {
         "type": "logical",
@@ -151,7 +151,7 @@
           }
         ],
         "action": "route",
-        "outbound": "proxy"
+        "outbound": "默认选择"
       },
       {
         "action": "resolve"
@@ -177,7 +177,7 @@
           "apple_domain"
         ],
         "action": "route",
-        "outbound": "apple"
+        "outbound": "苹果"
       },
       {
         "rule_set": [
@@ -191,7 +191,7 @@
           "microsoft_domain"
         ],
         "action": "route",
-        "outbound": "microsoft"
+        "outbound": "微软"
       },
       {
         "rule_set": [
@@ -334,33 +334,33 @@
   },
   "outbounds": [
     {
-      "tag": "proxy",
+      "tag": "默认选择",
       "type": "selector",
       "outbounds": [
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto",
+        "香港自动",
+        "台湾自动",
+        "日本自动",
+        "新加坡自动",
+        "美国自动",
+        "手动选择1",
+        "自动选择",
         "direct"
       ],
-      "default": "all-auto"
+      "default": "自动选择"
     },
     {
-      "tag": "apple",
+      "tag": "苹果",
       "type": "selector",
       "outbounds": [
-        "proxy",
+        "默认选择",
         "direct",
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto"
+        "香港自动",
+        "台湾自动",
+        "日本自动",
+        "新加坡自动",
+        "美国自动",
+        "手动选择1",
+        "自动选择"
       ],
       "default": "direct"
     },
@@ -368,47 +368,47 @@
       "tag": "myurl",
       "type": "selector",
       "outbounds": [
-        "proxy",
+        "默认选择",
         "direct",
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto"
+        "香港自动",
+        "台湾自动",
+        "日本自动",
+        "新加坡自动",
+        "美国自动",
+        "手动选择1",
+        "自动选择"
       ],
-      "default": "sg-auto"
+      "default": "新加坡自动"
     },
     {
       "tag": "onedrive",
       "type": "selector",
       "outbounds": [
-        "proxy",
+        "默认选择",
         "direct",
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto"
+        "香港自动",
+        "台湾自动",
+        "日本自动",
+        "新加坡自动",
+        "美国自动",
+        "手动选择1",
+        "自动选择"
       ],
       "default": "direct"
     },
     {
-      "tag": "microsoft",
+      "tag": "微软",
       "type": "selector",
       "outbounds": [
-        "proxy",
+        "默认选择",
         "direct",
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto"
+        "香港自动",
+        "台湾自动",
+        "日本自动",
+        "新加坡自动",
+        "美国自动",
+        "手动选择1",
+        "自动选择"
       ],
       "default": "direct"
     },
@@ -416,111 +416,111 @@
       "tag": "telegram",
       "type": "selector",
       "outbounds": [
-        "proxy",
+        "默认选择",
         "direct",
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto"
+        "香港自动",
+        "台湾自动",
+        "日本自动",
+        "新加坡自动",
+        "美国自动",
+        "手动选择1",
+        "自动选择"
       ],
-      "default": "proxy"
+      "default": "默认选择"
     },
     {
       "tag": "bilibili",
       "type": "selector",
       "outbounds": [
-        "proxy",
+        "默认选择",
         "direct",
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto"
+        "香港自动",
+        "台湾自动",
+        "日本自动",
+        "新加坡自动",
+        "美国自动",
+        "手动选择1",
+        "自动选择"
       ],
       "default": "direct"
     },
     {
-      "tag": "netflix",
+      "tag": "奈飞",
       "type": "selector",
       "outbounds": [
-        "proxy",
+        "默认选择",
         "direct",
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto"
+        "香港自动",
+        "台湾自动",
+        "日本自动",
+        "新加坡自动",
+        "美国自动",
+        "手动选择1",
+        "自动选择"
       ],
-      "default": "proxy"
+      "default": "默认选择"
     },
     {
       "tag": "bahamut",
       "type": "selector",
       "outbounds": [
-        "proxy",
+        "默认选择",
         "direct",
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto"
+        "香港自动",
+        "台湾自动",
+        "日本自动",
+        "新加坡自动",
+        "美国自动",
+        "手动选择1",
+        "自动选择"
       ],
-      "default": "proxy"
+      "default": "默认选择"
     },
     {
       "tag": "youtube",
       "type": "selector",
       "outbounds": [
-        "proxy",
+        "默认选择",
         "direct",
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto"
+        "香港自动",
+        "台湾自动",
+        "日本自动",
+        "新加坡自动",
+        "美国自动",
+        "手动选择1",
+        "自动选择"
       ],
-      "default": "proxy"
+      "default": "默认选择"
     },
     {
-      "tag": "openai",
+      "tag": "人工智能",
       "type": "selector",
       "outbounds": [
-        "proxy",
+        "默认选择",
         "direct",
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto"
+        "香港自动",
+        "台湾自动",
+        "日本自动",
+        "新加坡自动",
+        "美国自动",
+        "手动选择1",
+        "自动选择"
       ],
-      "default": "proxy"
+      "default": "默认选择"
     },
     {
       "tag": "cn",
       "type": "selector",
       "outbounds": [
-        "proxy",
+        "默认选择",
         "direct",
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto"
+        "香港自动",
+        "台湾自动",
+        "日本自动",
+        "新加坡自动",
+        "美国自动",
+        "手动选择1",
+        "自动选择"
       ],
       "default": "direct"
     },
@@ -528,25 +528,25 @@
       "tag": "final",
       "type": "selector",
       "outbounds": [
-        "proxy",
+        "默认选择",
         "direct",
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto"
+        "香港自动",
+        "台湾自动",
+        "日本自动",
+        "新加坡自动",
+        "美国自动",
+        "手动选择1",
+        "自动选择"
       ],
-      "default": "proxy"
+      "default": "默认选择"
     },
     {
-      "tag": "all",
+      "tag": "手动选择1",
       "type": "selector",
       "outbounds": []
     },
     {
-      "tag": "hk-auto",
+      "tag": "香港自动",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
@@ -554,7 +554,7 @@
       "tolerance": 50
     },
     {
-      "tag": "tw-auto",
+      "tag": "台湾自动",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
@@ -562,7 +562,7 @@
       "tolerance": 50
     },
     {
-      "tag": "jp-auto",
+      "tag": "日本自动",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
@@ -570,7 +570,7 @@
       "tolerance": 50
     },
     {
-      "tag": "sg-auto",
+      "tag": "新加坡自动",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
@@ -578,7 +578,7 @@
       "tolerance": 50
     },
     {
-      "tag": "us-auto",
+      "tag": "美国自动",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
@@ -586,7 +586,7 @@
       "tolerance": 50
     },
     {
-      "tag": "all-auto",
+      "tag": "自动选择",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
@@ -598,14 +598,14 @@
       "type": "selector",
       "outbounds": [
         "direct",
-        "proxy",
-        "hk-auto",
-        "tw-auto",
-        "jp-auto",
-        "sg-auto",
-        "us-auto",
-        "all",
-        "all-auto"
+        "默认选择",
+        "香港自动",
+        "台湾自动",
+        "日本自动",
+        "新加坡自动",
+        "美国自动",
+        "手动选择1",
+        "自动选择"
       ],
       "default": "direct"
     },
