@@ -17,26 +17,26 @@ config.outbounds.push(...proxies)
 
 config.outbounds.map(i => {
     // 处理 all：添加所有代理
-  if (i.tag === 'all') {
+  if (i.tag === '手动选择1') {
     i.outbounds.push(...getTags(proxies));
   }
   // 处理 all-auto：添加所有不带 home 的代理
-  if (i.tag === 'all-auto') {
+  if (i.tag === '自动选择') {
     i.outbounds.push(...getTags(proxies.filter(p => !/home|hy|reality/i.test(p.tag))));
   }
-  if (['hk-auto'].includes(i.tag)) {
+  if (['香港自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /港|hk|hongkong|kong kong|🇭🇰/i))
   }
-  if (['tw-auto'].includes(i.tag)) {
+  if (['台湾自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /台|tw|taiwan|🇹🇼/i))
   }
-  if (['jp-auto'].includes(i.tag)) {
+  if (['日本自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /日本|jp|japan|🇯🇵/i))
   }
-  if (['sg-auto'].includes(i.tag)) {
+  if (['新加坡自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /^(?!.*(?:us)).*(新|狮城|sg|singapore|🇸🇬)/i))
   }
-  if (['us-auto'].includes(i.tag)) {
+  if (['美国自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /美|us|unitedstates|united states|🇺🇸/i))
   }
 })
