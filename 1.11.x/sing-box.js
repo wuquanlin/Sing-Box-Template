@@ -22,7 +22,7 @@ config.outbounds.map(i => {
   }
   // 处理 all-auto：添加所有不带 home 的代理
   if (i.tag === 'all-auto') {
-    i.outbounds.push(...getTags(proxies.filter(p => !/home|hy|vless/i.test(p.tag))));
+    i.outbounds.push(...getTags(proxies.filter(p => !/home|hy|reality/i.test(p.tag))));
   }
   if (['hk', 'hk-auto'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /港|hk|hongkong|kong kong|🇭🇰/i))
