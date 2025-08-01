@@ -16,10 +16,6 @@ let proxies = await produceArtifact({
 config.outbounds.push(...proxies)
 
 config.outbounds.map(i => {
-    // 处理 all：添加所有代理
-  if (i.tag === '手动选择1') {
-    i.outbounds.push(...getTags(proxies));
-  }
   // 处理 all-auto：添加所有不带 home 的代理
   if (i.tag === '自动选择') {
     i.outbounds.push(...getTags(proxies.filter(p => !/home|hy|reality/i.test(p.tag))));
@@ -38,6 +34,15 @@ config.outbounds.map(i => {
   }
   if (['美国自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /美|us|unitedstates|united states|🇺🇸/i))
+  }
+  if (['home'].includes(i.tag)) {
+    i.outbounds.push(...getTags(proxies, /home/i))
+  }
+  if (i.tag === '手动选择') {
+    i.outbounds.push(...getTags(proxies));
+  }
+  if (i.tag === '手动选择1') {
+    i.outbounds.push(...getTags(proxies));
   }
 })
 
