@@ -120,6 +120,11 @@
         "outbound": "哔哩哔哩"
       },
       {
+        "rule_set": "googleplay_domain",
+        "action": "route",
+        "outbound": "默认选择"
+      },
+      {
         "rule_set": [
           "netflix_ip",
           "netflix_domain"
@@ -224,6 +229,13 @@
         "type": "remote",
         "format": "source",
         "url": "https://ghfast.top/https://raw.githubusercontent.com/wuquanlin/proxyrules/refs/heads/main/singbox-myurl.json",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "googleplay_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://ghfast.top/https://raw.githubusercontent.com/wuquanlin/proxyrules/refs/heads/main/google-play.srs",
         "download_detour": "direct"
       },
       {
