@@ -195,8 +195,11 @@
       },
       {
         "rule_set": [
-          "ad_blocker"
-        ],
+          "ad_blocker",
+          "category-ads-ir",
+          "category-ads",
+          "category-ads@ads"
+                 ],
         "action": "reject"
       },
       {
@@ -327,6 +330,34 @@
         "format": "binary",
         "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/category-ads-all.srs",
         "download_detour": "direct"
+      },
+      {
+        "tag": "category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/category-ads-all@ads.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "category-ads-ir",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/category-ads-ir.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "category-ads",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/category-ads.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "category-ads@ads",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/category-ads@ads.srs",
+        "download_detour": "direct"
       }
     ],
     "final": "final",
@@ -367,7 +398,7 @@
       "default": "direct"
     },
     {
-      "tag": "自定义翻墙",
+      "tag": "myurl",
       "type": "selector",
       "outbounds": [
         "默认选择",
