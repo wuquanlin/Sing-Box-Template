@@ -106,6 +106,15 @@
         "outbound": "direct"
       },
       {
+        "rule_set": [
+          "ad_blocker",
+          "category-ads-ir",
+          "category-ads",
+          "category-ads@ads"
+                 ],
+        "action": "reject"
+      },
+      {
         "rule_set": "bilibili_domain",
         "action": "route",
         "outbound": "哔哩哔哩"
@@ -192,15 +201,6 @@
         ],
         "action": "route",
         "outbound": "微软"
-      },
-      {
-        "rule_set": [
-          "ad_blocker",
-          "category-ads-ir",
-          "category-ads",
-          "category-ads@ads"
-                 ],
-        "action": "reject"
       },
       {
         "rule_set": [
