@@ -88,7 +88,7 @@
       {
         "ip_cidr": ["192.168.6.0/24"],
         "action": "route",
-        "outbound": "手动选择1"
+        "outbound": "home"
       },
       {
         "ip_is_private": true,
@@ -121,7 +121,7 @@
       {
         "rule_set": "bahamut_domain",
         "action": "route",
-        "outbound": "bahamut"
+        "outbound": "奈飞"
       },
       {
         "rule_set": "youtube_domain",
@@ -162,14 +162,14 @@
           "telegram_domain"
         ],
         "action": "route",
-        "outbound": "电报"
+        "outbound": "默认选择"
       },
       {
         "rule_set": [
           "myurl_domain"
         ],
         "action": "route",
-        "outbound": "自定义翻墙"
+        "outbound": "myurl"
       },
       {
         "rule_set": [
@@ -184,7 +184,7 @@
           "onedrive_domain"
         ],
         "action": "route",
-        "outbound": "onedrive"
+        "outbound": "clouddrive"
       },
       {
         "rule_set": [
@@ -342,6 +342,7 @@
         "日本自动",
         "新加坡自动",
         "美国自动",
+        "手动选择",
         "手动选择1",
         "自动选择",
         "direct"
@@ -359,6 +360,7 @@
         "日本自动",
         "新加坡自动",
         "美国自动",
+        "手动选择",
         "手动选择1",
         "自动选择"
       ],
@@ -375,13 +377,14 @@
         "日本自动",
         "新加坡自动",
         "美国自动",
+        "手动选择",
         "手动选择1",
         "自动选择"
       ],
       "default": "默认选择"
     },
     {
-      "tag": "onedrive",
+      "tag": "clouddrive",
       "type": "selector",
       "outbounds": [
         "默认选择",
@@ -407,6 +410,7 @@
         "日本自动",
         "新加坡自动",
         "美国自动",
+        "手动选择",
         "手动选择1",
         "自动选择"
       ],
@@ -423,6 +427,7 @@
         "日本自动",
         "新加坡自动",
         "美国自动",
+        "手动选择",
         "手动选择1",
         "自动选择"
       ],
@@ -439,6 +444,7 @@
         "日本自动",
         "新加坡自动",
         "美国自动",
+        "手动选择",
         "手动选择1",
         "自动选择"
       ],
@@ -455,26 +461,11 @@
         "日本自动",
         "新加坡自动",
         "美国自动",
+        "手动选择",
         "手动选择1",
         "自动选择"
       ],
       "default": "新加坡自动"
-    },
-    {
-      "tag": "bahamut",
-      "type": "selector",
-      "outbounds": [
-        "默认选择",
-        "direct",
-        "香港自动",
-        "台湾自动",
-        "日本自动",
-        "新加坡自动",
-        "美国自动",
-        "手动选择1",
-        "自动选择"
-      ],
-      "default": "默认选择"
     },
     {
       "tag": "油管",
@@ -487,6 +478,7 @@
         "日本自动",
         "新加坡自动",
         "美国自动",
+        "手动选择",
         "手动选择1",
         "自动选择"
       ],
@@ -503,6 +495,7 @@
         "日本自动",
         "新加坡自动",
         "美国自动",
+        "手动选择",
         "手动选择1",
         "自动选择"
       ],
@@ -519,6 +512,7 @@
         "日本自动",
         "新加坡自动",
         "美国自动",
+        "手动选择",
         "手动选择1",
         "自动选择"
       ],
@@ -535,10 +529,16 @@
         "日本自动",
         "新加坡自动",
         "美国自动",
+        "手动选择",
         "手动选择1",
         "自动选择"
       ],
       "default": "默认选择"
+    },
+    {
+      "tag": "手动选择",
+      "type": "selector",
+      "outbounds": []
     },
     {
       "tag": "手动选择1",
@@ -587,6 +587,14 @@
     },
     {
       "tag": "自动选择",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "home",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
