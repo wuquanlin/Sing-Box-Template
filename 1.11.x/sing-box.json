@@ -235,7 +235,7 @@
         "tag": "googleplay_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://ghfast.top/https://raw.githubusercontent.com/wuquanlin/proxyrules/refs/heads/main/google-play.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google-play.srs",
         "download_detour": "direct"
       },
       {
