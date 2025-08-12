@@ -5,7 +5,7 @@
         "tag": "google",
         "type": "https",
         "server": "119.29.29.29",
-        "detour": "proxy"
+        "detour": "默认选择"
       },
       {
         "tag": "ali",
