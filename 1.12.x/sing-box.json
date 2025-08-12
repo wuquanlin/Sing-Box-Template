@@ -551,11 +551,6 @@
       "outbounds": []
     },
     {
-      "tag": "clouddrive",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
       "tag": "香港自动",
       "type": "urltest",
       "outbounds": [],
