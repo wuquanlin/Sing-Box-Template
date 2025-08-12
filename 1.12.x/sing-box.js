@@ -18,7 +18,7 @@ config.outbounds.push(...proxies)
 config.outbounds.map(i => {
   // 处理 all-auto：添加所有不带 home 的代理
   if (i.tag === '自动选择') {
-    i.outbounds.push(...getTags(proxies.filter(p => !/home|hy|reality/i.test(p.tag))));
+    i.outbounds.push(...getTags(proxies.filter(p => !/home|hy|reality|lxy/i.test(p.tag))));
   }
   if (['香港自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /港|hk|hongkong|hong kong|🇭🇰/i))
@@ -37,6 +37,9 @@ config.outbounds.map(i => {
   }
   if (['home'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /home/i))
+  }
+  if (['clouddrive'].includes(i.tag)) {
+    i.outbounds.push(...getTags(proxies, /lxy|xsus/i))
   }
   if (i.tag === '手动选择') {
     i.outbounds.push(...getTags(proxies));
