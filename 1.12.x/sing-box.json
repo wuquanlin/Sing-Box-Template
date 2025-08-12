@@ -13,14 +13,11 @@
       {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "local"},
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
     ],
-    "final": "foreign",
+    "final": "public",
     "strategy": "ipv4_only",
     "independent_cache": true
   },
   "route": {
-    "default_domain_resolver": {
-      "server": "ali"
-    },
     "rules": [
       {
         "action": "sniff",
@@ -336,7 +333,11 @@
         "format": "binary",
         "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/category-ads@ads.srs",
         "download_detour": "direct"
-      }
+      },
+      {"tag": "geosite-steamcn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam@cn.srs", "download_detour": "direct"},
+      {"tag": "geosite-!cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "direct"},
+      {"tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "direct"},
+      {"tag": "geosite-apple", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs", "download_detour": "direct"}
     ],
     "final": "final",
     "auto_detect_interface": true
