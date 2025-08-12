@@ -44,9 +44,6 @@ config.outbounds.map(i => {
   if (i.tag === '手动选择') {
     i.outbounds.push(...getTags(proxies));
   }
-  if (i.tag === '手动选择1') {
-    i.outbounds.push(...getTags(proxies));
-  }
 })
 
 config.outbounds.forEach(outbound => {
