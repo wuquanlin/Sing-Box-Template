@@ -18,22 +18,22 @@ config.outbounds.push(...proxies)
 config.outbounds.map(i => {
   // 处理 all-auto：添加所有不带 home 的代理
   if (i.tag === '自动选择') {
-    i.outbounds.push(...getTags(proxies.filter(p => !/home|hy|reality|lxy/i.test(p.tag))));
+    i.outbounds.push(...getTags(proxies.filter(p => !/(home|hy|reality|lxy)/i.test(p.tag))));
   }
   if (['香港自动'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /港|hk|hongkong|hong kong|🇭🇰/i))
+    i.outbounds.push(...getTags(proxies, /^(?!.*(?:lxy)).*(港|hk|hongkong|hong kong|🇭🇰)/i))
   }
   if (['台湾自动'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /台|tw|taiwan|🇹🇼/i))
+    i.outbounds.push(...getTags(proxies, /^(?!.*(?:lxy)).*(台|tw|taiwan|🇹🇼)/i))
   }
   if (['日本自动'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /日本|jp|japan|🇯🇵/i))
+    i.outbounds.push(...getTags(proxies, /^(?!.*(?:lxy)).*(日本|jp|japan|🇯🇵)/i))
   }
   if (['新加坡自动'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /^(?!.*(?:us)).*(新|狮城|sg|singapore|🇸🇬)/i))
+    i.outbounds.push(...getTags(proxies, /^(?!.*(?:lxy)).*(新|狮城|sg|singapore|🇸🇬)/i))
   }
   if (['美国自动'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /美|us|unitedstates|united states|🇺🇸/i))
+    i.outbounds.push(...getTags(proxies, /^(?!.*(?:lxy)).*(美|us|unitedstates|united states|🇺🇸)/i))
   }
   if (['home'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /home/i))
