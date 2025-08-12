@@ -147,7 +147,7 @@
           "onedrive_domain"
         ],
         "action": "route",
-        "outbound": "clouddrive"
+        "outbound": "国外云盘"
       },
       {
         "rule_set": [
@@ -394,7 +394,7 @@
       "default": "默认选择"
     },
     {
-      "tag": "clouddrive",
+      "tag": "国外云盘",
       "type": "selector",
       "outbounds": [
         "默认选择",
