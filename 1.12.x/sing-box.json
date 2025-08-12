@@ -1,55 +1,20 @@
 {
   "dns": {
     "servers": [
-      {
-        "tag": "google",
-        "type": "https",
-        "server": "119.29.29.29",
-        "detour": "默认选择"
-      },
-      {
-        "tag": "ali",
-        "type": "https",
-        "server": "223.5.5.5"
-      },
-      {
-        "tag": "fakeip",
-        "type": "fakeip",
-        "inet4_range": "198.18.0.0/15",
-        "inet6_range": "fc00::/18"
-      }
+      {"tag": "local", "type": "udp", "server": "223.5.5.5"},
+      {"tag": "public", "type": "https", "server": "dns.alidns.com", "domain_resolver": "local"},
+      {"tag": "foreign", "type": "https", "server": "dns.google", "domain_resolver": "local"},
+      {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
     "rules": [
-      {
-        "clash_mode": "Direct",
-        "action": "route",
-        "server": "ali"
-      },
-      {
-        "clash_mode": "Global",
-        "action": "route",
-        "server": "fakeip"
-      },
-      {
-        "query_type": "HTTPS",
-        "action": "reject"
-      },
-      {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-        "action": "route",
-        "server": "fakeip",
-        "rewrite_ttl": 1
-      },
-      {
-        "rule_set": "cn_domain",
-        "action": "route",
-        "server": "ali"
-      }
+      {"query_type": "HTTPS", "action": "reject"},
+      {"clash_mode": "direct", "server": "local"},
+      {"clash_mode": "global", "server": "foreign"},
+      {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "local"},
+      {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
     ],
-    "final": "google",
+    "final": "foreign",
+    "strategy": "ipv4_only",
     "independent_cache": true
   },
   "route": {
@@ -67,19 +32,7 @@
         ],
         "timeout": "500ms"
       },
-      {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "port": 53
-          },
-          {
-            "protocol": "dns"
-          }
-        ],
-        "action": "hijack-dns"
-      },
+      {"inbound": "dns-in", "action": "hijack-dns"},
       {
         "ip_is_private": true,
         "action": "route",
