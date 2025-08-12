@@ -39,7 +39,7 @@ config.outbounds.map(i => {
     i.outbounds.push(...getTags(proxies, /home/i))
   }
   if (['clouddrive'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /lxy|xsus/i))
+    i.outbounds.push(...getTags(proxies, /(lxy|xsus)/i))
   }
   if (i.tag === '手动选择') {
     i.outbounds.push(...getTags(proxies));
